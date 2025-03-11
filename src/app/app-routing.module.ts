@@ -3,9 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/components/login/login.component';
 import { SignupComponent } from './auth/components/signup/signup.component';
 
-
-
-  
   const routes: Routes = [
     { path: "", redirectTo: "login", pathMatch: "full" }, // ✅ Keep only ONE default route
     { path: "login", component: LoginComponent },
@@ -14,8 +11,6 @@ import { SignupComponent } from './auth/components/signup/signup.component';
     { path: "employee", loadChildren: () => import("./modules/employee/employee.module").then(e => e.EmployeeModule) },
   ];
   
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
