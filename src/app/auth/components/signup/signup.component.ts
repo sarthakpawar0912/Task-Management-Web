@@ -15,7 +15,6 @@ import { AuthService } from '../../services/auth/auth.service';
 export class SignupComponent {
   signupForm: FormGroup;
   hidePassword = true;
-
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -33,7 +32,6 @@ export class SignupComponent {
       { validators: this.passwordMatchValidator }
     );
   }
-
   togglePasswordVisibility() {
     this.hidePassword = !this.hidePassword;
   }
