@@ -35,7 +35,6 @@
         </mat-select>
         <mat-error *ngIf="taskForm.get('priority')?.hasError('required')">Priority is required!</mat-error>
       </mat-form-field>
-  
       <!-- Employee Field -->
       <mat-form-field appearance="outline" class="form-field">
         <mat-label>Select Employee</mat-label>
@@ -46,7 +45,6 @@
         </mat-select>
         <mat-error *ngIf="taskForm.get('employeeId')?.hasError('required')">Employee is required!</mat-error>
       </mat-form-field>
-  
       <!-- Submit Button -->
       <button mat-raised-button color="primary" type="submit" [disabled]="taskForm.invalid">
         Post Task
