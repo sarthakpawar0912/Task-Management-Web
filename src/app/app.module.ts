@@ -41,12 +41,13 @@ import { AdminRoutingModule } from './modules/admin/admin-routing.module';
     RouterModule,
     MatButtonModule,
     AdminRoutingModule,
-    MatSnackBarModule, MatDatepickerModule,
+    MatSnackBarModule,
+     MatDatepickerModule,
     MatNativeDateModule,
   ],
   providers: [
     provideClientHydration(withEventReplay()),
-    provideHttpClient() // ✅ Use provideHttpClient instead of HttpClientModule
+    provideHttpClient() 
   ],
   bootstrap: [AppComponent]
 })
