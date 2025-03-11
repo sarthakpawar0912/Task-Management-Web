@@ -15,7 +15,6 @@ interface Task {
   priority: string;
   taskStatus: string;
 }
-
 @Component({
   selector: 'app-dashboard',
   standalone: false,
@@ -41,6 +40,7 @@ export class DashboardComponent {
       this.router.navigateByUrl('/login');
       return;
     }
+    
     this.getTasks();
     this.searchForm = this.fb.group({
     title:[null]})
