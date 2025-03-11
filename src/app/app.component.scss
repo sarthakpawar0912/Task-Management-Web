@@ -1,0 +1,131 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body starts below the fixed navbar */
+body {
+  margin: 0;
+  padding-top: 80px; /* Prevents content from being overlapped by navbar */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background for contrast */
+}
+
+/* Common Navbar Styling */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, #6a0dad, #ff007f); /* Purple-Pink Gradient */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Fix White Strip Issue */
+mat-toolbar, .navbar {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Navbar Branding */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  color: #e0e0e0;
+}
+
+/* Spacer to push buttons to the right */
+.spacer {
+  flex: 1;
+}
+
+/* Navigation Buttons */
+mat-toolbar button, 
+.navbar-links button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  color: white;
+}
+
+/* Fix White Strip on Buttons */
+mat-toolbar button,
+.navbar-links button {
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Material Raised Button Fix */
+mat-raised-button {
+  box-shadow: none !important;
+}
+
+/* Primary Buttons (Login, Dashboard, Post Task) */
+.navbar-links button[color="primary"] {
+  background-color: #2196F3; /* Blue */
+}
+
+.navbar-links button[color="primary"]:hover {
+  background-color: #0b7dda;
+}
+
+/* Accent Buttons (Register) */
+.navbar-links button[color="accent"] {
+  background-color: #ff9800; /* Orange */
+}
+
+.navbar-links button[color="accent"]:hover {
+  background-color: #e68900;
+}
+
+/* Logout Button */
+mat-toolbar button.logout {
+  background-color: #ff4d4d; /* Red */
+}
+
+mat-toolbar button.logout:hover {
+  background-color: #e60000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  mat-toolbar {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  mat-toolbar button, 
+  .navbar-links button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

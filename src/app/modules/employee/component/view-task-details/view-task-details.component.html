@@ -1,0 +1,129 @@
+<!-- Main Container -->
+<div class="main-container">
+    
+    <!-- Task Details Section -->
+    <div class="task-list" *ngIf="taskData; else noData">
+        
+        <!-- Task Card -->
+        <mat-card class="task-card">
+            
+            <!-- Task Details -->
+            <div class="task-details">
+                
+                <!-- Task Name -->
+                <h2 class="task-name">{{ taskData?.title }}</h2>
+                
+                <!-- Task Description -->
+                <p class="task-description">{{ taskData?.description }}</p>
+
+                <!-- Divider Line -->
+                <mat-divider></mat-divider>
+
+                <!-- Task Information -->
+                <div class="task-info">
+                    
+                    <!-- Due Date -->
+                    <div class="info-row">
+                        <span class="info-label">Due Date:</span>
+                        <span class="info-value">{{ taskData?.dueDate | date: 'MMM d, y' }}</span>
+                    </div>
+
+                    <!-- Employee Name -->
+                    <div class="info-row">
+                        <span class="info-label">Employee:</span>
+                        <span class="info-value">{{ taskData?.employeeName }}</span>
+                    </div>
+
+                    <!-- Task Priority -->
+                    <div class="info-row">
+                        <span class="info-label">Priority:</span>
+                        <span class="info-value priority" [ngClass]="taskData?.priority?.toLowerCase()">
+                            {{ taskData?.priority }}
+                        </span>
+                    </div>
+
+                    <!-- Task Status -->
+                    <div class="info-row">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value status" [ngClass]="taskData?.taskStatus?.toLowerCase()">
+                            {{ taskData?.taskStatus }}
+                        </span>
+                    </div>
+
+                </div> <!-- End of Task Information -->
+
+            </div> <!-- End of Task Details -->
+
+        </mat-card> <!-- End of Task Card -->
+
+    </div> <!-- End of Task Details Section -->
+
+    <!-- No Task Data Message -->
+    <ng-template #noData>
+        <p class="error-message">Task details not available.</p>
+    </ng-template>
+
+    <!-- Publish Comment Section -->
+    <mat-card class="comment-card">
+        
+        <!-- Comment Card Content -->
+        <mat-card-content>
+
+            <!-- Section Title -->
+            <h4>Publish Your Comment</h4>
+
+            <!-- Comment Form -->
+            <form [formGroup]="commentForm">
+                
+                <!-- Text Area Input -->
+                <mat-form-field appearance="fill">
+                    <mat-label>Content</mat-label>
+                    <textarea matInput formControlName="content" placeholder="Write your comment here..."></textarea>
+                </mat-form-field>
+
+                <!-- Publish Button -->
+                <button mat-raised-button color="primary" [disabled]="commentForm.invalid" (click)="publishComment()">
+                    Publish Comment
+                </button>
+
+            </form> <!-- End of Comment Form -->
+
+        </mat-card-content>
+
+    </mat-card> <!-- End of Comment Card -->
+
+    <!-- Display Comments Section -->
+    <div class="comments-container" *ngIf="comments.length > 0">
+        
+        <!-- Section Title -->
+        <h4>Comments</h4>
+
+        <!-- Comments Grid -->
+        <div class="comments-grid">
+            
+            <!-- Individual Comment -->
+            <mat-card *ngFor="let comment of comments; trackBy: trackByCommentId" class="comment-item">
+                
+                <!-- Comment Header -->
+                <mat-card-header>
+                    <mat-card-title>{{ comment.postedBy }}</mat-card-title>
+                    <mat-card-subtitle>{{ comment.createdAt | date: 'medium' }}</mat-card-subtitle>
+                </mat-card-header>
+
+                <!-- Comment Content -->
+                <mat-card-content>
+                    {{ comment.content }}
+                </mat-card-content>
+
+            </mat-card> <!-- End of Individual Comment -->
+
+        </div> <!-- End of Comments Grid -->
+
+    </div> <!-- End of Display Comments Section -->
+
+    <!-- No Comments Message -->
+    <div *ngIf="comments.length === 0" class="no-comments">
+        No comments available. Be the first to comment!
+    </div>
+
+</div> <!-- End of Main Container -->

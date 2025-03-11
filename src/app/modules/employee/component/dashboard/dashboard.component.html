@@ -1,0 +1,72 @@
+<div class="task-list">
+  <mat-card class="task-card" *ngFor="let task of listOfTasks">
+    <div class="task-details">
+      <!-- Task Title -->
+      <h2 class="task-name">{{ task.title }}</h2>
+
+      <!-- Task Description -->
+      <p class="task-description">{{ task.description }}</p>
+
+      <mat-divider></mat-divider>
+
+      <!-- Task Info -->
+      <div class="task-info">
+        <div class="info-row">
+          <span class="info-label">Due Date:</span>
+          <span class="info-value">{{ task.dueDate | date: 'MMM d, y' }}</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Employee:</span>
+          <span class="info-value">{{ task.employeeName }}</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Priority:</span>
+          <span 
+            class="info-value priority" 
+            [ngClass]="task.priority?.toLowerCase()"
+          >
+            {{ task.priority }}
+          </span>
+        </div>
+
+        <!-- 🔹 Task Status -->
+        <div class="info-row">
+          <span class="info-label">Status:</span>
+          <span 
+            class="info-value status" 
+            [ngClass]="task.taskStatus?.toLowerCase()"
+          >
+            {{ task.taskStatus }}
+          </span>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <!-- Action Buttons -->
+      <div class="actions">
+        <button
+        mat-icon-button
+        color="accent"
+        class="view-button"
+        [routerLink]="['/employee/view-details', task.id]">
+        <mat-icon>visibility</mat-icon>
+      </button>
+      
+
+
+        <!-- ✅ Fixed Edit Button to Open Status Options -->
+        <button mat-icon-button [matMenuTriggerFor]="statusMenu">
+          <mat-icon>edit</mat-icon>
+        </button>
+        
+        <mat-menu #statusMenu="matMenu">
+          <button mat-menu-item (click)="updateStatus(task.id, 'INPROGRESS')">INPROGRESS</button>
+          <button mat-menu-item (click)="updateStatus(task.id, 'COMPLETED')">COMPLETED</button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-card>
+</div>

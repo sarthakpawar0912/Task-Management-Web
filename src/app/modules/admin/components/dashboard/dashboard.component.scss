@@ -1,0 +1,168 @@
+/* Body Fix: Ensure Navbar Doesn't Overlap */
+body {
+    padding-top: 80px;
+    background-color: #f5f5f5;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: sticky;
+    top: 60px;
+    background: white;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    width: 50%;
+}
+
+/* Task List */
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Task Card */
+.task-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Task Title */
+.task-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Task Description */
+.task-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+/* Task Info Section */
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #444;
+}
+
+.info-value {
+    color: #555;
+    font-weight: 500;
+}
+
+/* Priority Colors */
+.priority.low {
+    color: #1976d2;
+}
+
+.priority.medium {
+    color: #ff9800;
+}
+
+.priority.high {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Status Colors */
+.status.inprogress {
+    color: #ff9800;
+}
+
+.status.completed {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.status.cancelled {
+    color: #d32f2f;
+}
+
+.status.deferred {
+    color: #9e9e9e;
+}
+
+/* Divider */
+mat-divider {
+    margin: 10px 0;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Action Buttons */
+.actions button,
+.actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Update Button */
+.update-button {
+    background: #1976d2;
+    color: white;
+}
+
+/* Delete Button */
+.delete-button {
+    background: #d32f2f;
+    color: white;
+}
+
+/* Button Hover Effect */
+.actions button:hover,
+.actions a:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-input {
+        width: 90%;
+    }
+
+    .task-list {
+        grid-template-columns: 1fr;
+    }
+}
