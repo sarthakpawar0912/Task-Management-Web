@@ -9,14 +9,13 @@ const BASE_URL="http://localhost:8080";
 export class AuthService {
 
   constructor(private http:HttpClient) { }
-
   signup(signupRequest: any): Observable<any> {
-    console.log(signupRequest);
-    
+    console.log(signupRequest); 
     return this.http.post(BASE_URL + "/api/auth/signup", signupRequest);
   }
     
-    login(loginRequest:any): Observable<any>{
+   login(loginRequest:any): Observable<any>{
+   
     return this.http.post(BASE_URL + "/api/auth/login", loginRequest);
     }
 }
