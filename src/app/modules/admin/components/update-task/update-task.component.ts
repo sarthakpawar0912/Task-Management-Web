@@ -34,12 +34,10 @@ if (isNaN(this.id) || this.id <= 0) {
   this.snackBar.open('Invalid Task ID. Redirecting...', 'Close', { duration: 3000 });
   this.router.navigate(['/admin/tasks']); // Redirect if ID is invalid
 }
-
     this.initializeForm(); // Initialize the form structure
     this.getUsers(); // Fetch the employee list
     this.getTaskById(); // Fetch the task details
   }
-
   // Initialize the form with required fields
   initializeForm(): void {
     this.updateTaskForm = this.fb.group({
@@ -52,7 +50,6 @@ if (isNaN(this.id) || this.id <= 0) {
     });
   }
 
-  // Fetch all employees
   getUsers(): void {
     this.adminService.getUsers().subscribe({
       next: (res) => {
