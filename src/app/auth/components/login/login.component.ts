@@ -48,11 +48,12 @@ export class LoginComponent {
         this.router.navigateByUrl("/admin/dashboard");
       else if(StorageService.isEmployeeLoggedIn())
         this.router.navigateByUrl("/employee/dashboard");
-      
+    
       this.snackbar.open(" Login successful","close",{duration:5000});
     }else{
       this.snackbar.open("Invalid Credentails","Close",{duration:5000,panelClass:"error-snackbar"});
     }
   })
   }
+  
 }
