@@ -11,13 +11,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './view-task-details.component.scss'
 })
 export class ViewTaskDetailsComponent {
-  
-  
   taskId: number = 0;
   taskData: any;
   comments: any[] = [];
   commentForm!: FormGroup;
-
   constructor(
     private service: AdminService,
     private activatedRoute: ActivatedRoute,
