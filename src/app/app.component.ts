@@ -14,10 +14,9 @@ export class AppComponent {
   isAdminLoggedIn: boolean = false;
 
   constructor(private router: Router, private storageService: StorageService) {}
-
+ 
   ngOnInit() {
     this.checkLoginStatus();
-
     this.router.events.subscribe(() => {
       this.checkLoginStatus();
     });
