@@ -44,5 +44,6 @@ import { MatListModule } from '@angular/material/list';
     MatListModule,
   ],
 })
+
 export class DemoAngularMaterialModule {}
  
