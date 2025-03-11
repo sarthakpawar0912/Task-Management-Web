@@ -7,8 +7,6 @@ import { DemoAngularMaterialModule } from '../../DemoAngularmaterialModule';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewTaskDetailsComponent } from './component/view-task-details/view-task-details.component';
-
-
 @NgModule({
   declarations: [
     DashboardComponent,

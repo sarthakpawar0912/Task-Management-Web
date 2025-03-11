@@ -29,7 +29,6 @@ export class ViewTaskDetailsComponent {
   ngOnInit() {
     this.taskId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
 
-  
     if (this.taskId) {
       this.getTaskById();
       this.getComments();

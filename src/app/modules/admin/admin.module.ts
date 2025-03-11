@@ -31,7 +31,6 @@ import { ViewTaskDetailsComponent } from './components/view-task-details/view-ta
   ],
   imports: [
     CommonModule,
-
     DemoAngularMaterialModule,
     AdminRoutingModule,
     ReactiveFormsModule,

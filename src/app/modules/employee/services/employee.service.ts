@@ -36,8 +36,6 @@ export class EmployeeService {
       });
     }
   
-  
-    
     createComment(taskId: number, content: string): Observable<any> {
       const body = { content }; // Send JSON body
       return this.http.post<any>(`${BASIC_URL}api/employee/task/comment/${taskId}`, body, {

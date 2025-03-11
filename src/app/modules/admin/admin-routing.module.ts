@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'task/:id/edit', component: UpdateTaskComponent },
   { path: 'task-details/:id', component: ViewTaskDetailsComponent },];
 
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

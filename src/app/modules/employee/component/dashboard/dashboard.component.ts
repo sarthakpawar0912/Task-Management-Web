@@ -27,8 +27,6 @@ export class DashboardComponent {
     this.getTasks();
   }
 
-
- 
   getTasks(): void {
     this.service.getEmployeeTaskById().subscribe({
       next: (res) => {
