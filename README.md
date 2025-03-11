@@ -1,2 +1,28 @@
-# Task-Management-Web
-This Task Management System, built with Spring Boot, Angular, and MySQL, streamlines task handling for Admins and Employees. Admins manage and assign tasks, while Employees update statuses and add comments. With search and user-specific task views, the system enhances collaboration, efficiency, and workflow management.
+# 📝 Task Management System  
+
+## 🚀 Overview  
+The **Task Management System** is a Full Stack web application built with **Spring Boot, Angular, MySQL, and Angular Material**. It enables **Admins** to manage, assign, and track tasks, while **Employees** can update task statuses and communicate via comments. The system ensures smooth collaboration and efficient workflow management.  
+
+---
+
+## 🎯 Features  
+
+### 🔹 Admin Features  
+✅ Create, update, delete, and view tasks.  
+✅ Assign tasks to Employees.  
+✅ Post and view comments on tasks.  
+✅ Search tasks by title for easy management.  
+
+### 🔹 Employee Features  
+✅ View assigned tasks by their User ID.  
+✅ Update task status.  
+✅ Post comments to provide task progress updates.  
+
+---
+
+## 🏗️ Tech Stack  
+🔹 **Backend:** Java Spring Boot  
+🔹 **Frontend:** Angular 18 with Angular Material  
+🔹 **Database:** MySQL  
+🔹 **Version Control:** Git & GitHub  
+
