@@ -3,6 +3,7 @@
       <mat-card-title>Sign Up</mat-card-title>
       <mat-card-content>
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+       
           <!-- Name Field -->
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Name</mat-label>
@@ -14,6 +15,7 @@
               Name must be at least 3 characters long.
             </mat-error>
           </mat-form-field>
+       
           <!-- Email Field -->
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Email</mat-label>
@@ -25,6 +27,7 @@
               Please enter a valid email.
             </mat-error>
           </mat-form-field>  
+         
           <!-- Password Field -->
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Password</mat-label>
@@ -51,6 +54,7 @@
               Password must be at least 8 characters long.
             </mat-error>
           </mat-form-field>
+        
           <!-- Confirm Password Field -->
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Confirm Password</mat-label>
@@ -61,6 +65,7 @@
               placeholder="Confirm Password"
               required
             />
+          
             <button
               mat-icon-button
               matSuffix
@@ -82,7 +87,9 @@
           <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">
             Sign Up
           </button>
+
         </form>
+        
         <div class="redirect">
           <p>Already have an account? <a routerLink="/login">Go to Login</a></p>
         </div>
