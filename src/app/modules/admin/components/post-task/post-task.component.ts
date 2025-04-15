@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 import { AdminService } from '../../services/admin.service';
 import { Router } from '@angular/router';
 
@@ -77,4 +76,5 @@ export class PostTaskComponent implements OnInit {
       console.error('Form is invalid:', this.taskForm.errors);
     }
   }
+  
 }
