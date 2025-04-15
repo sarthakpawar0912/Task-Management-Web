@@ -1,6 +1,7 @@
 <div class="task-list">
   <mat-card class="task-card" *ngFor="let task of listOfTasks">
     <div class="task-details">
+    
       <!-- Task Title -->
       <h2 class="task-name">{{ task.title }}</h2>
 
@@ -44,6 +45,7 @@
       </div>
 
       <mat-divider></mat-divider>
+   
       <!-- Action Buttons -->
       <div class="actions">
         <button
@@ -54,9 +56,7 @@
         <mat-icon>visibility</mat-icon>
       </button>
       
-
-
-        <!-- ✅ Fixed Edit Button to Open Status Options -->
+      <!-- ✅ Fixed Edit Button to Open Status Options -->
         <button mat-icon-button [matMenuTriggerFor]="statusMenu">
           <mat-icon>edit</mat-icon>
         </button>
