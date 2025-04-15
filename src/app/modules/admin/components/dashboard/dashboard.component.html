@@ -6,6 +6,7 @@
   </mat-form-field>
 </form>
 
+
 <!-- Task List Container -->
 <div class="task-list">
   <mat-card class="task-card" *ngFor="let task of listofTasks">
@@ -14,6 +15,7 @@
       <p class="task-description">{{ task.description }}</p>
 
       <mat-divider></mat-divider>
+
 
       <!-- Task Information -->
       <div class="task-info">
@@ -32,8 +34,7 @@
           <span
             class="info-value priority"
             [ngClass]="task.priority.toLowerCase()"
-          >
-            {{ task.priority }}
+          >{{ task.priority }}
           </span>
         </div>
 
