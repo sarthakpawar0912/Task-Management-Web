@@ -14,8 +14,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from '../../app-routing.module';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatDividerModule } from '@angular/material/divider';
 import { AdminRoutingModule } from './admin-routing.module';
@@ -23,6 +21,7 @@ import { ViewTaskDetailsComponent } from './components/view-task-details/view-ta
 
 
 @NgModule({
+ 
   declarations: [
     DashboardComponent,
     PostTaskComponent,
