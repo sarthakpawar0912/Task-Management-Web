@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📝 Task Management System  
 
 ## 🚀 Overview  
@@ -88,3 +89,39 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 >>>>>>> 473fbd2 (Initial commit - Task Management System)
+=======
+# 🗂️ Task Management System 🚀
+
+Welcome to the **Task Management System** – a full-stack application built with **Spring Boot (Java)** for the backend and **Angular + Angular Material** for the frontend. This system allows effective task delegation and progress tracking for organizations. 🎯
+
+---
+
+## ✨ Features
+
+### 👨‍💼 Admin Features:
+- ✅ Create, update, delete, and view tasks.
+- 🔄 Assign tasks to employees.
+- 💬 Post comments to tasks.
+- 🔍 Search tasks by title.
+- 📊 View task list with real-time status updates.
+
+### 👨‍💻 Employee Features:
+- 👁️ View tasks assigned by Admin.
+- 🛠️ Update task status (e.g., To-Do, In Progress, Completed).
+- 💬 Post comments to update Admin.
+- 📅 Manage and track personal task flow.
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology                     |
+|--------------|--------------------------------|
+| 🖥️ Frontend  | Angular 18, Angular Material   |
+| 🔙 Backend   | Spring Boot (Java)             |
+| 🗃️ Database | MySQL                          |
+| 🔐 Security  | JWT Authentication             |
+| 🎨 UI/UX     | Angular Material Components    |
+
+---
+>>>>>>> beb71e7865ac7c9ab7c412e50540436ee6310ef7
