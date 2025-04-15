@@ -21,6 +21,7 @@ import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   exports: [
+  
     MatButtonModule,
     MatCardModule,
     MatInputModule,
@@ -42,6 +43,7 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatDatepickerModule,
     MatListModule,
+    
   ],
 })
 
