@@ -2,7 +2,6 @@
   <h2>Update Task</h2>
 
   <mat-spinner *ngIf="isLoading" diameter="50"></mat-spinner>
-
   <form *ngIf="!isLoading && updateTaskForm" [formGroup]="updateTaskForm" (ngSubmit)="updateTask()">
     
     <!-- Title -->
@@ -33,6 +32,7 @@
         This Input Is Required!
       </mat-error>
     </mat-form-field>
+   
     <!-- Priority -->
     <mat-form-field appearance="outline" class="form-field">
       <mat-label>Select Priority</mat-label>
@@ -45,7 +45,8 @@
         This Input Is Required!
       </mat-error>
     </mat-form-field>
-   <!-- Task Status (Fixed Issue) -->
+   
+    <!-- Task Status (Fixed Issue) -->
    <mat-form-field appearance="outline" class="form-field">
     <mat-label>Select the Task Status</mat-label>
     <mat-select formControlName="taskStatus">
@@ -57,7 +58,8 @@
       This Input Is Required!
     </mat-error>
   </mat-form-field>
-    <!-- Employee -->
+  
+  <!-- Employee -->
     <mat-form-field appearance="outline" class="form-field">
       <mat-label>Select Employee</mat-label>
       <mat-select formControlName="employeeId">
@@ -74,5 +76,6 @@
     <button mat-raised-button color="primary" type="submit" [disabled]="updateTaskForm.invalid || isLoading">
       Update Task
     </button>
+    
   </form>
 </div>
