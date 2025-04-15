@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import { AdminService } from '../../../admin/services/admin.service';
 import { EmployeeService } from '../../services/employee.service';
 
 @Component({
@@ -13,7 +12,6 @@ import { EmployeeService } from '../../services/employee.service';
 })
 export class ViewTaskDetailsComponent {
 
- 
   taskId: number = 0;
   taskData: any;
   comments: any[] = [];
@@ -66,7 +64,6 @@ export class ViewTaskDetailsComponent {
 
   publishComment() {
     if (this.commentForm.invalid) return;
-
     const content = this.commentForm.get('content')?.value;
 
     this.service.createComment(this.taskId, content).subscribe({
@@ -89,4 +86,5 @@ export class ViewTaskDetailsComponent {
   trackByCommentId(index: number, comment: any) {
     return comment.id;
   }
+  
 }
