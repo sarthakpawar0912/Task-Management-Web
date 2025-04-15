@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { AdminService } from '../../services/admin.service';
 
 @Component({
@@ -11,8 +10,10 @@ import { AdminService } from '../../services/admin.service';
   templateUrl: './update-task.component.html',
   styleUrl: './update-task.component.scss'
 })
+
 export class UpdateTaskComponent {
-id!: number;  // Task ID from URL
+
+  id!: number;  // Task ID from URL
   updateTaskForm!: FormGroup;  // Reactive form for updating tasks
   listOfEmployees: any[] = [];  // Employee list
   listOfPriorities: string[] = ['LOW', 'MEDIUM', 'HIGH'];  // Priority levels
