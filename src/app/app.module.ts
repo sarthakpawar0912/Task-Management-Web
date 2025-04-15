@@ -21,11 +21,14 @@ import { AdminRoutingModule } from './modules/admin/admin-routing.module';
 
 @NgModule({
   declarations: [
+   
     AppComponent,
     LoginComponent,
     SignupComponent
+  
   ],
   imports: [
+   
     BrowserModule,
     FormsModule,
     DemoAngularMaterialModule,
@@ -44,6 +47,7 @@ import { AdminRoutingModule } from './modules/admin/admin-routing.module';
     MatSnackBarModule,
      MatDatepickerModule,
     MatNativeDateModule,
+  
   ],
   providers: [
     provideClientHydration(withEventReplay()),
