@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { StorageService } from '../../services/storage/storage.service';
@@ -15,6 +14,7 @@ import { StorageService } from '../../services/storage/storage.service';
 export class LoginComponent {
 
   loginForm: FormGroup;
+
   hidePassword = true;
 
   constructor(
@@ -22,7 +22,8 @@ export class LoginComponent {
     private authService: AuthService,
     private snackbar: MatSnackBar,
     private router: Router
-  ) {
+  ) 
+  {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
