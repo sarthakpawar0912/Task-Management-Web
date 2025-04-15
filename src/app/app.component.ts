@@ -11,6 +11,7 @@ import { StorageService } from './auth/services/storage/storage.service';
 export class AppComponent {
  
   isEmployeeLoggedIn: boolean = false;
+  
   isAdminLoggedIn: boolean = false;
 
   constructor(private router: Router, private storageService: StorageService) {}
@@ -32,4 +33,5 @@ export class AppComponent {
     this.checkLoginStatus(); // Update login state after logout
     this.router.navigateByUrl("/login");
   }
+  
 }
