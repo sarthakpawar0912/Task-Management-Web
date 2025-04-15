@@ -6,11 +6,13 @@ import { UpdateTaskComponent } from './components/update-task/update-task.compon
 import { ViewTaskDetailsComponent } from './components/view-task-details/view-task-details.component';
 
 const routes: Routes = [
+ 
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }, // ✅ Redirect admin root to dashboard
   { path: 'dashboard', component: DashboardComponent },
   { path: 'post-task', component: PostTaskComponent },
   { path: 'task/:id/edit', component: UpdateTaskComponent },
-  { path: 'task-details/:id', component: ViewTaskDetailsComponent },];
+  { path: 'task-details/:id', component: ViewTaskDetailsComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
