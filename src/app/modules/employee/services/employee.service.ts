@@ -4,9 +4,11 @@ import { Observable } from 'rxjs';
 import { StorageService } from '../../../auth/services/storage/storage.service';
 
 const BASIC_URL = 'http://localhost:8080/'; // Adjust the base URL if necessary
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class EmployeeService {
 
   constructor(private http:HttpClient) { }
@@ -15,7 +17,6 @@ export class EmployeeService {
     return this.http.get<any[]>(`${BASIC_URL}api/employee/tasks`,{headers:this.createAuthorizationHeader()});
   }
 
-
   updateStatus(id: number, status: string): Observable<any> {
     return this.http.get<any>(
       `${BASIC_URL}api/employee/task/updateStatus?id=${id}&status=${status}`,
@@ -23,7 +24,6 @@ export class EmployeeService {
     );
   }
 
-  
     getTaskById(id: number): Observable<any> {
       return this.http.get<any>(`${BASIC_URL}api/employee/task/${id}`, {
         headers: this.createAuthorizationHeader(),
@@ -54,4 +54,5 @@ export class EmployeeService {
         'Content-Type': 'application/json',
       });
     }
+    
 }
