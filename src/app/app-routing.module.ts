@@ -17,4 +17,5 @@ import { SignupComponent } from './auth/components/signup/signup.component';
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
