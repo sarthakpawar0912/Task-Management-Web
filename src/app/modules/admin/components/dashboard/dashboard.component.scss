@@ -155,6 +155,7 @@ mat-divider {
     transform: scale(1.1);
     opacity: 0.9;
 }
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .search-input {
@@ -164,4 +165,5 @@ mat-divider {
     .task-list {
         grid-template-columns: 1fr;
     }
+    
 }
