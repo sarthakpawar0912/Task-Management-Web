@@ -10,11 +10,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './view-task-details.component.html',
   styleUrl: './view-task-details.component.scss'
 })
+
 export class ViewTaskDetailsComponent {
+  
   taskId: number = 0;
   taskData: any;
   comments: any[] = [];
   commentForm!: FormGroup;
+
   constructor(
     private service: AdminService,
     private activatedRoute: ActivatedRoute,
@@ -24,8 +27,6 @@ export class ViewTaskDetailsComponent {
 
   ngOnInit() {
     this.taskId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-
-  
     if (this.taskId) {
       this.getTaskById();
       this.getComments();
@@ -86,4 +87,5 @@ export class ViewTaskDetailsComponent {
   trackByCommentId(index: number, comment: any) {
     return comment.id;
   }
+  
 }
