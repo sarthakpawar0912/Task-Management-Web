@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
@@ -13,8 +12,10 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrl: './signup.component.scss'
 })
 export class SignupComponent {
+ 
   signupForm: FormGroup;
   hidePassword = true;
+  
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -32,6 +33,7 @@ export class SignupComponent {
       { validators: this.passwordMatchValidator }
     );
   }
+
   togglePasswordVisibility() {
     this.hidePassword = !this.hidePassword;
   }
@@ -90,4 +92,5 @@ export class SignupComponent {
       },
     });
   }
+  
 }
