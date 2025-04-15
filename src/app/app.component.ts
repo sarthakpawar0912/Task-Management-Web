@@ -9,6 +9,7 @@ import { StorageService } from './auth/services/storage/storage.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  [x: string]: any;
  
   isEmployeeLoggedIn: boolean = false;
   
@@ -33,5 +34,5 @@ export class AppComponent {
     this.checkLoginStatus(); // Update login state after logout
     this.router.navigateByUrl("/login");
   }
-  
+
 }
