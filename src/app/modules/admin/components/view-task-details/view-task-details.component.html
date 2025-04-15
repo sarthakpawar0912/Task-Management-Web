@@ -1,5 +1,6 @@
 <!-- Main Container -->
 <div class="main-container">
+  
   <!-- Task Details Section -->
   <div class="task-list" *ngIf="taskData; else noData">
     <mat-card class="task-card">
@@ -58,6 +59,7 @@
       </form>
     </mat-card-content>
   </mat-card>
+  
   <!-- Display Comments Section -->
   <div class="comments-container" *ngIf="comments.length > 0">
     <h4>Comments</h4>
@@ -78,4 +80,5 @@
   <div *ngIf="comments.length === 0" class="no-comments">
     No comments available. Be the first to comment!
   </div>
+  
 </div>
