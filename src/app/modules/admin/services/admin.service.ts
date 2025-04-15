@@ -9,6 +9,7 @@ const BASE_URL = 'http://localhost:8080/'; // Adjust the base URL if necessary
   providedIn: 'root',
 })
 export class AdminService {
+  
   constructor(private http: HttpClient) {}
 
   private createAuthorizationHeader(): HttpHeaders {
@@ -47,7 +48,6 @@ export class AdminService {
     });
   }
 
-
   getTaskById(id: number): Observable<any> {
     return this.http.get<any>(`${BASE_URL}api/admin/task/${id}`, {
       headers: this.createAuthorizationHeader(),
@@ -59,8 +59,6 @@ export class AdminService {
       headers: this.createAuthorizationHeader(),
     });
   }
-
-
   
   createComment(taskId: number, content: string): Observable<any> {
     const body = { content }; // Send JSON body
@@ -80,6 +78,5 @@ export class AdminService {
       headers: this.createAuthorizationHeader(),
     });
   }
-  
   
 }
