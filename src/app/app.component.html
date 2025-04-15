@@ -10,6 +10,7 @@
   </mat-toolbar>
 <router-outlet></router-outlet>
 </div>
+
 <!-- For Admin Logged In State -->
   <div *ngIf="isAdminLoggedIn" >
     <mat-toolbar color="primary" class="navbar">
@@ -21,6 +22,7 @@
     </mat-toolbar>
 <router-outlet></router-outlet>
   </div>
+  
 <!-- For Employee Logged In State -->
 <div *ngIf="isEmployeeLoggedIn" >
   <mat-toolbar color="primary">
