@@ -24,8 +24,10 @@ interface Task {
 })
 
 export class DashboardComponent {
+ 
   listofTasks: Task[] = [];
   searchForm!: FormGroup;
+  
   constructor(
     private service: AdminService,
     private snackBar: MatSnackBar,
@@ -42,7 +44,6 @@ export class DashboardComponent {
       this.router.navigateByUrl('/login');
       return;
     }
-    
     this.getTasks();
     this.searchForm = this.fb.group({
     title:[null]})
@@ -59,7 +60,6 @@ export class DashboardComponent {
       }
     });
   }
-  
 
   deleteTask(id: number) {
     this.service.deleteTask(id).subscribe((res) => {
@@ -72,7 +72,6 @@ export class DashboardComponent {
 
   searchTask() {
     const title = this.searchForm.get('title')?.value?.trim();
-  
     if (!title) {
       this.getTasks(); // Reset list when search is empty
       return;
