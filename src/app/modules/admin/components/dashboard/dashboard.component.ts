@@ -87,9 +87,6 @@ export class DashboardComponent {
         this.listofTasks = []; // Reset list on error
       }
     });
-  }
-  
-  
-  
+  }  
   
 }
